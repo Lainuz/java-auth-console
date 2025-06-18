@@ -44,21 +44,27 @@ auth-console/
         └── ci.yml             # (Opcional) Workflow de CI/CD para GitHub Actions
 ```
 
-## ¿Cómo ejecutar la aplicación?
+## ¿Cómo compilar y ejecutar la aplicación?
 
-1. **Compila el proyecto:**
+### **Compilar el proyecto**
 
-   ```bash
-   mvn compile
-   ```
+Desde la carpeta raíz (`auth-console/`), ejecuta:
 
-2. **Ejecuta la aplicación de consola:**
+```bash
+mvn compile
+```
 
-   ```bash
-   mvn exec:java -Dexec.mainClass="com.ejemplo.auth.App"
-   ```
+Esto compila todo el código fuente Java y crea los archivos `.class` necesarios en la carpeta `target/`.
 
-   El menú te permitirá registrar, autenticar o recuperar la contraseña de usuarios.
+### **Ejecutar la aplicación de consola**
+
+Luego de compilar, ejecuta la aplicación con:
+
+```bash
+mvn exec:java -Dexec.mainClass="com.ejemplo.auth.App"
+```
+
+* Se mostrará un menú en consola donde podrás registrar usuarios, autenticarte (login) o recuperar contraseñas.
 
 ## ¿Cómo correr los tests?
 
@@ -163,8 +169,3 @@ mvn -Dtest=AutenticadorTest,RecuperarContrasenaTest test
    ```
 
 Ahora, cada vez que intentes commitear, el hook correrá los tests y solo permitirá el commit si todos pasan.
-
-## Créditos y uso educativo
-
-Este repositorio está pensado para uso académico y como plantilla base para ejercicios prácticos en Java, DevOps y buenas prácticas de desarrollo.
-Siéntete libre de adaptarlo, mejorarlo y compartirlo en tus cursos.
