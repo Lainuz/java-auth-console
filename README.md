@@ -169,3 +169,5 @@ mvn -Dtest=AutenticadorTest,RecuperarContrasenaTest test
    ```
 
 Ahora, cada vez que intentes commitear, el hook correrá los tests y solo permitirá el commit si todos pasan.
+
+---
